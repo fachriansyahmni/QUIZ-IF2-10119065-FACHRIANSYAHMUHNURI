@@ -1,8 +1,11 @@
 package quiz.if2.pkg10119065.fachriansyahmuhnuri;
 
-/**
- *
- * @author Fachriansyah PC
+/*
+ * @author
+ * NAMA                 : Fachriansyah Muhammad Nur Ihsan
+ * KELAS                : PBOIF2
+ * NIM                  : 10119065
+ * Deskripsi Program    : Program ini menampilkan program kasir
  */
 public class ServicePrice implements ServiceItem{
     private float priceService, discount;
@@ -38,7 +41,10 @@ public class ServicePrice implements ServiceItem{
 
     @Override
     public float getPrice() {
-        return priceService;
+        if (priceService == 1) return 45000;
+        if (priceService == 2) return 55000;
+        if (priceService == 3) return 15000;
+        return 0;
     }
 
     @Override
@@ -49,6 +55,11 @@ public class ServicePrice implements ServiceItem{
 
     @Override
     public float getSale(boolean isMember, float parServicePrice) {
+        return 1;
+    }
+    
+    public float getTotalPay(float priceService, float discount)
+    {
         return 1;
     }
 }
